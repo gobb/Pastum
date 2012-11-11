@@ -1,0 +1,31 @@
+{
+    "name": "excelwebzone/pastum",
+    "type": "library",
+    "description": "The Pastum PHP framework",
+    "keywords": ["framework"],
+    "homepage": "https://github.com/excelwebzone/Pastum",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael H. Arieli",
+            "email": "excelwebzone@gmail.com",
+            "homepage": "http://excelwebzone.com/"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "replace": {
+        "pastum/pagi": "self.version",
+        "pastum/pami": "self.version"
+    },
+    "autoload": {
+        "psr-0": { "Pastum\\": "src/" }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
