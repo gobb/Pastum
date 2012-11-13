@@ -117,7 +117,7 @@ abstract class AbstractClient implements ClientInterface
     /**
      * {@inheritdoc}
      */
-    public function amd($options = array())
+    public function amd(array $options = array())
     {
         $knownOptions = array(
             'initialSilence', 'greeting', 'afterGreetingSilence', 'totalAnalysisTime',
@@ -768,7 +768,7 @@ abstract class AbstractClient implements ClientInterface
     /**
      * {@inheritdoc}
      */
-    public function playCustomTones(array $frequencies)
+    public function playCustomTones(array $frequencies = array())
     {
         return $this->exec('PlayTones', $frequencies);
     }

@@ -273,8 +273,9 @@ class Client implements ClientInterface
 
                 $event = $this->messageToEvent($message);
 
-                $response = $this->findResponse($event);
-                $response->addEvent($event);
+                if ($response = $this->findResponse($event)) {
+                    $response->addEvent($event);
+                }
             }
         }
     }
@@ -329,7 +330,7 @@ class Client implements ClientInterface
      *
      * @return \Pastum\Component\PAMI\Message\Response\ResponseMessage
      */
-    private function _messageToResponse($message)
+    private function messageToResponse($message)
     {
         $response = new ResponseMessage($message);
 
@@ -351,7 +352,7 @@ class Client implements ClientInterface
      *
      * @return \Pastum\Component\PAMI\Message\Event\EventMessage
      */
-    private function _messageToEvent($message)
+    private function messageToEvent($message)
     {
         return $this->eventFactory->createFromRaw($message);
     }

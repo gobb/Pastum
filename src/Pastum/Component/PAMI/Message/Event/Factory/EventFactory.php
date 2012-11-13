@@ -43,7 +43,7 @@ class EventFactory
         }
 
         $name = substr($message, $eventStart, $eventEnd - $eventStart);
-        $className = '\\Asterisk\\AMI\\Message\\Event\\'.$name.'Event';
+        $className = '\\Pastum\\Component\\PAMI\\Message\\Event\\'.$name.'Event';
 
         if (class_exists($className, true)) {
             return new $className($message);

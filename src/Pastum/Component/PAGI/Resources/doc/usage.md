@@ -41,7 +41,7 @@ Getting an instance of the client
 ---------------------------------
 
 ```php
-use Asterisk\Client\Client;
+use Pastum\Component\PAGI\Client\Client;
 
 $client = Client::getInstance();
 ```
@@ -61,7 +61,7 @@ Checkpoint #1: A basic application
 ==================================
 
 ```php
-use Asterisk\Client\Client;
+use Pastum\Component\PAGI\Client\Client;
 
 $client = Client::getInstance();
 
